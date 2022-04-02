@@ -8,7 +8,7 @@ int main() {
     printf("Escolha o numero maximo para o array: \n");
     scanf("%d", &max); 
 
-    ptr = (int*)malloc(max*(sizeof(int))); 
+    ptr = malloc(max*(sizeof(int))); 
 
     if(ptr!=NULL) {
     
@@ -25,9 +25,8 @@ int main() {
 
         printf("Insira um novo valor para o maximo: \n"); 
         scanf("%d", &newMax); 
-        ptr = (int*)realloc(ptr, newMax*sizeof(int)); 
+        ptr = realloc(ptr, newMax*sizeof(int)); 
 
-        // insira os novos elementos
         // ao invés de j = 0 para inserir, você coloca j = max, pois você vai inserir depois dos valores já existentes
         printf("Insira %d elementos: \n", newMax-max);
         for(int j = max; j<newMax; j++) {
