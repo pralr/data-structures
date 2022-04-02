@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int map(int(*f)(int x), int n, int i, int *array, int *newArray) {
+void map(int(*f)(int x), int n, int i, int *array, int *newArray) {
     if(i < n) {
         newArray = realloc(newArray, (i+1)*sizeof(int));
         newArray[i] = f(*(array+i));
