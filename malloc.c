@@ -6,9 +6,8 @@ int main(){
     printf("Escolha uma quantidade maxima para o array: \n");
     scanf("%d", &max); 
 
-    ptr = (int*)malloc(max * sizeof(int)); 
-
-    // confira se a memória foi alocada 
+    ptr = malloc(max * sizeof(int)); 
+    
     if(ptr!=NULL) {
         printf("Insira os elementos: \n"); 
         for(int i = 0; i < max; i++) 
